@@ -1,0 +1,287 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+#body{
+    width: 100vw;
+    height: 99vh;
+    background: linear-gradient(rgb(189,256,255),rgb(253,208,215));
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    transition: background 1.5s ease-in-out;
+}
+
+#center{
+    display: flex;
+    position: absolute;
+        left: 35%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 70%;
+}
+img{
+    width: 45vh;
+    margin: 20px; 
+}
+
+header{
+    position: absolute;
+            top: 0;
+            width: 100%;
+    text-align: center;
+    display: flex;
+        flex-direction: row;   
+        justify-content: space-between;     
+}
+
+
+.summsec{
+    position: absolute;
+        left: 0;
+        bottom: 6%;
+        justify-content: justify;
+        width: 18%;
+        padding: 0px 0px 0px 3rem;
+        
+
+}
+
+#number{
+    position: absolute;
+        right: 2rem;
+        bottom: 4.3%;
+        text-align: right;
+        font-size: 1.1rem;
+}
+
+#logo{
+    margin: 1.75%;
+    font-weight: 900;
+    font-size: 3.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.gmail{
+    margin: 1.75%;
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+.gmail a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.16rem;
+}
+
+.namecentre{
+    position: relative;
+    display: flex;
+        justify-content: center;
+       
+    font-size: 1.4rem;
+}
+
+#bookname{
+    width: 120%;
+    font-family: 'stliti', cursive, sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#author{
+    font-family: 'Imprint MT Shadow', serif;
+    font-size: 1.6rem;
+    text-decoration: underline;
+    word-spacing: 2.5px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#quote{
+    font-style: italic;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 120%;
+}
+
+#summary{
+    font-size: 1.23rem;
+    justify-content: justify;
+    padding-bottom: 1.3rem;
+}
+
+.summsec #copyright{
+    font-size: smaller;
+}
+.bold{
+    font-weight: bold;
+}
+
+.sidename{
+    padding-bottom: 0.5rem;
+    font-family: 'Lucida Calligraphy', cursive, serif;
+}
+
+.inanimation{ 
+    opacity: 0; 
+    transform: translateY(100%); 
+    animation: slide-up 1.5s forwards; 
+}
+@keyframes slide-up{ 
+    0% { 
+        opacity: 0;
+        transform: translateY(100%);
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+}
+
+.outanimation{ 
+    opacity: 0; 
+    animation: slide-out 1.5s forwards; 
+}
+@keyframes slide-out{ 
+    0% { 
+        opacity: 0;
+        transform: translateY(0);
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateY(-100%); 
+   } 
+}        
+
+.inleft{
+    opacity: 0; 
+    transform: translateX(-100%); 
+    animation: slideleft 1.5s ease-in forwards; 
+}
+@keyframes slideleft{ 
+    0% { 
+        opacity: 0;
+        transform: translateX(-200px);
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateX(0); 
+    } 
+}
+
+.outleft{ 
+    opacity: 0; 
+    animation: outleft 1.5s ease-in-out forwards; 
+}
+@keyframes out{ 
+    0% { 
+        opacity: 1;
+        transform: translateZ(0);
+    } 
+    100% { 
+        opacity: 0; 
+        transform: translateZ(10%); 
+    }  
+}
+
+.inright{
+    opacity: 0; 
+    transform: translateX(100%); 
+    animation: slideright 1.5s ease-in forwards; 
+}
+ @keyframes slideright{ 
+    0% { 
+        opacity: 0;
+        transform: translateX(100px);
+        } 
+    100% { 
+        opacity: 1; 
+        transform: translateX(0); 
+    }
+}
+
+
+@keyframes background{ 
+    0% { 
+        background-color: initial; 
+    }
+    50% { 
+        background-color: intermediateColor; 
+    }
+    100% { background-color: finalColor; 
+    } 
+}
+
+@media(max-width: 600px){
+    body{
+        width: 100vw;
+        height: 90vh;
+    }
+
+    #number{
+        visibility: hidden;
+    }
+
+    .summsec{
+        visibility: hidden;
+    }
+
+    header{
+        position: absolute;
+        top: 5%;
+        width: 100vw;
+        height: 20;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    header #logo{
+        font-size: 3em;
+    }
+    header .gmail{
+        padding-bottom: 50px;
+    }
+
+    #center{
+        width: 80vw;
+        padding: 0px;
+        margin: 0px;
+        position: absolute;
+        left: 4.5%;
+        top: 22%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #img img {
+        width: 100%;
+        height: auto;
+        box-shadow: 15px 15px 0px gray;
+    }
+
+    #bookname{
+        font-size: 1.2em;
+        text-align: center;
+        padding-left: 20px;
+    }
+
+    #author{
+        font-size: 1.4em;
+        text-align: center;
+    }
+
+    #quote{
+        font-size: 1.05em;
+        text-align: center;
+        width: 110%;
+        padding-left: 30px;
+    }
+}
